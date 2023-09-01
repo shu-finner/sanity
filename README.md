@@ -6,10 +6,10 @@
 
 Create a homepage using Gatsby and Sanity. This starter demonstrates how to use Sanity to build a homepage and can be customized to match your own visual branding.
 
-[View the Demo](https://gatsbysanityhomepage.gatsbyjs.io/)
+[View the Demo](https://gatsbysanityhomepagets.gatsbyjs.io/)
 
 **Note:**
-This version of the Sanity homepage starter is written in JavaScript. If you want to use Sanity but TypeScript is more your style, there is also a TypeScript version maintained on [GitHub](https://github.com/gatsbyjs/gatsby-starter-sanity-homepage-ts).
+This version of the Sanity homepage starter is written in TypeScript. If you want to use Sanity but JavaScript is more your style, there is also a JavaScript version maintained on [GitHub](https://github.com/gatsbyjs/gatsby-starter-sanity-homepage).
 
 ## Quick start
 
@@ -20,7 +20,7 @@ You will need a Sanity account to use this starter. You can create a new account
    Use the Gatsby CLI to get started locally:
 
    ```sh repo
-   npx gatsby new my-homepage https://github.com/gatsbyjs/gatsby-starter-sanity-homepage
+   npx gatsby new my-homepage https://github.com/gatsbyjs/gatsby-starter-sanity-homepage-ts
    ```
 
 1. **Set up Sanity Studio**
@@ -98,7 +98,7 @@ This repository uses the `gatsby-provision` convention to allow for automatic CM
 
 Otherwise, you can always set up your content in Sanity manually before deploying to Gatsby Cloud.
 
-[![Deploy to Gatsby](https://www.gatsbyjs.com/deploynow.svg "Deploy to Gatsby")](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-sanity-homepage)
+[![Deploy to Gatsby](https://www.gatsbyjs.com/deploynow.svg "Deploy to Gatsby")](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-sanity-homepage-ts)
 
 ## Setting up Gatsby Cloud Preview
 
@@ -152,13 +152,13 @@ export const colors = {
 If you'd like to add additional colors, add additional keys to this object.
 This file is imported into `src/theme.css.ts` and creates CSS custom properties, that can be imported and used in other `.css.ts` files.
 
-The UI components file `src/components/ui.js` imports styles from `src/components/ui.css.ts`. You can see how the theme and color values are being used in this file.
+The UI components file `src/components/ui.tsx` imports styles from `src/components/ui.css.ts`. You can see how the theme and color values are being used in this file.
 
 ### Add your logo
 
 ![Logo](./docs/images/logo.png)
 
-Replace the `src/components/brand-logo.js` component with your own brand logo.
+Replace the `src/components/brand-logo.tsx` component with your own brand logo.
 If you have an SVG version, it can be rendered inline as a React component, following the example in this file. Note that SVG attributes will need to be camel cased for JSX.
 
 Using an inline SVG for the logo allows it to pick up the colors used in CSS, which is how the logo colors are inverted for the mobile menu.
@@ -169,12 +169,12 @@ If you prefer to use an image, use the [`StaticImage`](https://www.gatsbyjs.com/
 
 ![Headings & Buttons](./docs/images/headings-buttons.png)
 
-To further customize the look and feel of the homepage, edit the UI components in `src/components/ui.js` and styles in `src/components/ui.css.ts`.
+To further customize the look and feel of the homepage, edit the UI components in `src/components/ui.tsx` and styles in `src/components/ui.css.ts`.
 
 ### Customize section components
 
 To customize any of the sections of the homepage, edit the relevant component in `src/components`.
-Most of the styles for these components are handled with shared UI components in `src/components/ui.js`.
+Most of the styles for these components are handled with shared UI components in `src/components/ui.tsx`.
 
 ### Create custom section components
 
@@ -300,7 +300,7 @@ For this example, we'll create a new "Banner" component.
 1. Next, create the Banner component:
 
    ```jsx fileExt
-   // src/components/banner.js
+   // src/components/banner.tsx
    import * as React from "react"
    import { graphql } from "gatsby"
    import { Section, Container, Heading, Text } from "./ui"
@@ -325,10 +325,10 @@ For this example, we'll create a new "Banner" component.
    `
    ```
 
-1. Export the component from `src/components/sections.js`
+1. Export the component from `src/components/sections.tsx`
 
    ```js fileExt
-   // src/components/sections.js
+   // src/components/sections.tsx
    export { default as HomepageHero } from "./hero"
    export { default as HomepageFeature } from "./feature"
    export { default as HomepageFeatureList } from "./feature-list"
@@ -343,10 +343,10 @@ For this example, we'll create a new "Banner" component.
    export { default as HomepageBanner } from "./banner"
    ```
 
-1. Add the GraphQL query fragment to the query in `src/pages/index.js`
+1. Add the GraphQL query fragment to the query in `src/pages/index.tsx`
 
    ```js fileExt
-   // in src/pages/index.js
+   // in src/pages/index.tsx
    export const query = graphql`
      {
        homepage {

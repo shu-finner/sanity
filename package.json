@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-starter-sanity-homepage",
+  "name": "gatsby-starter-sanity-homepage-ts",
   "version": "1.0.0",
   "engines": {
     "node": ">=18.0.0"
@@ -40,6 +40,7 @@
     "gatsby-provision-sanity": "^0.0.5",
     "prettier": "2.5.1",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.5"
+    "lint-staged": "^12.3.5",
+    "typescript": "^4.6.2"
   }
 }

@@ -1,6 +1,12 @@
 import * as React from "react"
 
-export default function Head({ title, description, image }) {
+interface HeadProps {
+  title: string
+  description?: string
+  image?: { url: string }
+}
+
+export default function Head({ title, description, image }: HeadProps) {
   return (
     <>
       <meta charSet="utf-8" />

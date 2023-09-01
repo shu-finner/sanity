@@ -1,8 +1,11 @@
 import * as React from "react"
 import "../styles.css"
 import { Slice } from "gatsby"
+interface LayoutProps {
+  children?: React.ReactNode
+}
 
-const Layout = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Slice alias="header" />
